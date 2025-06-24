@@ -1,0 +1,42 @@
+body {
+  font-family: 'Lora', serif;
+  background-color: #f5f0e6;
+  margin: 0;
+  padding: 0;
+  color: #333;
+}
+header.parallax {
+  background-image: url('../img/foto1.jpg');
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  padding: 100px 20px;
+  color: white;
+  text-align: center;
+}
+nav#navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #27541d;
+  color: white;
+}
+nav#navbar ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  padding: 10px;
+}
+nav#navbar ul li {
+  margin: 0 10px;
+}
+nav#navbar ul li a {
+  color: white;
+  text-decoration: none;
+}
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #27541d;
+  color: white;
+}
