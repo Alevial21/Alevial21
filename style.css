@@ -1,42 +1,53 @@
+
 body {
+  margin: 0;
   font-family: 'Lora', serif;
   background-color: #f5f0e6;
-  margin: 0;
-  padding: 0;
+  background-image: url('../images/rural-texture.png');
+  background-size: cover;
   color: #333;
 }
-header.parallax {
-  background-image: url('../img/foto1.jpg');
-  background-attachment: fixed;
-  background-size: cover;
-  background-position: center;
-  padding: 100px 20px;
-  color: white;
-  text-align: center;
-}
-nav#navbar {
+
+header {
   position: fixed;
-  top: 0;
   width: 100%;
-  background-color: #27541d;
-  color: white;
+  top: 0;
+  background-color: rgba(255,255,255,0.9);
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  z-index: 1000;
+  transition: top 0.3s;
 }
-nav#navbar ul {
+
+.navbar {
   display: flex;
-  justify-content: center;
-  list-style: none;
-  padding: 10px;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
 }
-nav#navbar ul li {
+
+.navbar a {
+  text-decoration: none;
+  color: #27541d;
+  font-weight: bold;
   margin: 0 10px;
 }
-nav#navbar ul li a {
+
+section.hero {
+  height: 100vh;
+  background-image: url('../images/carrusel1.jpg');
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
   color: white;
-  text-decoration: none;
+  text-shadow: 2px 2px 5px rgba(0,0,0,0.7);
+  animation: fadeIn 2s ease-in-out;
 }
-footer {
-  text-align: center;
-  padding: 20px;
-  background-color: #27541d;
-  color: white;
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
 }

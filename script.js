@@ -1,9 +1,12 @@
-let current = 0;
-const images = document.querySelectorAll("#carousel img");
-setInterval(() => {
-  images[current].style.display = "none";
-  current = (current + 1) % images.length;
-  images[current].style.display = "block";
-}, 3000);
 
-ScrollReveal().reveal('h1, p, .botones, .masonry', { delay: 200, duration: 1000, reset: true });
+let lastScrollTop = 0;
+const header = document.querySelector("header");
+window.addEventListener("scroll", function() {
+  let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+  if (scrollTop > lastScrollTop){
+    header.style.top = "-80px";
+  } else {
+    header.style.top = "0";
+  }
+  lastScrollTop = scrollTop;
+});
